@@ -82,6 +82,7 @@ schema = Schema((
 FeedFeederItem_schema = getattr(ATFolder, 'schema', Schema(())).copy() + \
     schema.copy()
 
+FeedFeederItem_schema['relatedItems'].widget.visible = {'edit': 'visible', 'view': 'visible'}
 
 class FeedFeederItem(ATFolder):
     """

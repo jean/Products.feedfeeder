@@ -38,6 +38,13 @@
            tal:attributes="href context/remote_url"
            i18n:translate="source_available_here">Source available here.</a>
       </div>
+
+      <div class="related-items"
+          tal:define="field python:context.Schema()['relatedItems'];
+                      mode string:view;
+                      field_macro context/widgets/field/macros/view">
+              <metal:use_field use-macro="field_macro" />
+      </div>
     </div>
   </body>
 </html>
